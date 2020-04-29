@@ -14,11 +14,11 @@ mathjax: true
 😛😜😝代码托管在`github`上：[exemplar-based-image-inpainting](https://github.com/jonzhaocn/exemplar-based-image-inpainting)
 ### 2 算法
 如图1所示，为算法伪代码。
-![图1 算法伪代码](/assets/exemplar-based-image-inpainting/pseudo-code.png)
+![图1 算法伪代码](/imgs/exemplar-based-image-inpainting/pseudo-code.png)
 
 #### 2.1 区域划分
 实现这个算法，首先需要进行图像区域的划分。如图2所示，$\Omega$为目标区域，是需要进行填充的区域，$\phi$为源区域，作为填充数据的来源。$\Omega$的边界为$\delta\Omega$。如果从像素值来看的话，可以将目标区域的像素值设置为`0`，但是`0`在图像中为黑色的意思，所以最好可以有一个辅助数组来标志缺失区域。
-![图2 区域划分与边界](/assets/exemplar-based-image-inpainting/boundary.png)
+![图2 区域划分与边界](/imgs/exemplar-based-image-inpainting/boundary.png)
 
 #### 2.2 计算边界区域
 使用下面的代码可以方便地计算出边界点的位置。`map`是一个二值数组，只有0、1，其中1表示缺失像素值所在位置。计算出来的结果`result`中，1所在的位置就是边界点所在的位置。
@@ -47,9 +47,9 @@ $\bigtriangledown f = [ \begin{matrix} g_x \\ g_y \end{matrix}]=[ \begin{matrix}
 
 注意，在修复过程的迭代中，缺失区域逐渐变小，但是提供像素来源的目标区域固定不变。因为目标区域中，修复出来的像素值可信度比较低，不予以采用。
 ### 3 修复结果
-![原图](/assets/exemplar-based-image-inpainting/original-image.png)
-![缺失信息](/assets/exemplar-based-image-inpainting/masked-image.png)
-![修复之后](/assets/exemplar-based-image-inpainting/inpainted-image.png)
+![原图](/imgs/exemplar-based-image-inpainting/original-image.png)
+![缺失信息](/imgs/exemplar-based-image-inpainting/masked-image.png)
+![修复之后](/imgs/exemplar-based-image-inpainting/inpainted-image.png)
 
 ### 4 参考文献
 1. `Criminisi A, Pérez P, Toyama K. Region filling and object removal by exemplar-based image inpainting[J]. IEEE Transactions on image processing, 2004, 13(9): 1200-1212.`

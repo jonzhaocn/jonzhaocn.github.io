@@ -120,9 +120,9 @@ args = struct('batch_size', batch_size, 'epoch', 10, 'learning_rate', 0.001, 'op
 [generator, discriminator] = gan_train(generator, discriminator, train_x, args);
 ```
 `example_1`的结果：
-![epoch_5_t_500.png](/assets/gan-base-on-matlab/example1-result1.png)
+![epoch_5_t_500.png](/imgs/gan-base-on-matlab/example1-result1.png)
 
-![epoch_6_t_500.png](/assets/gan-base-on-matlab/example1-result2.png)
+![epoch_6_t_500.png](/imgs/gan-base-on-matlab/example1-result2.png)
 
 
 
@@ -145,7 +145,7 @@ discriminator.layers = {
 };
 ```
 `example_2`的结果
-![epoch_7_t_1000.png](/assets/gan-base-on-matlab/example2-result1.png)
+![epoch_7_t_1000.png](/imgs/gan-base-on-matlab/example2-result1.png)
 
 
 

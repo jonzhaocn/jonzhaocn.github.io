@@ -37,9 +37,9 @@ mathjax: false
 到这里，网络的输入输出就确定了，向生成器中输入一个`1×1×100`的噪声得到一张`28×28×1`的图像。向鉴别器中输入一张`28×28×1`的图像得到一个`1×1×1`的`label`（概率值）。
 
 接下来就可以确定网络的结构，鉴别器和生成器的具体结构如表1、2所示。表中给出了网络中每一层的类型、步长、`padding`等。在这里确定网络结构的标准就是保证的网络输入输出的`size`与预设的一致即可。
-![](/assets/gan-base-on-matconvnet/discriminator-structure.png)
+![](/imgs/gan-base-on-matconvnet/discriminator-structure.png)
 
-![](/assets/gan-base-on-matconvnet/generator-structure.png)
+![](/imgs/gan-base-on-matconvnet/generator-structure.png)
 
 #### 3.2 如何向网络中添加一个网络层
 表1、2中的`layer type`有`conv`、`logistics loss`、`conv transpose`和`sigmoid`。`conv`表示卷积网络，卷积层的参数有`kernel size`、`stride`、`pad`、`dilate`和`output channel`。`kerel size`为卷积核的大小，在这里的`kernel`的高和宽都是相等的，也可以设置成不等的。同理，`stride`、`dilate`都可以设置成宽高不等的，设置成不相等的时候需要使用一个向量来表示，如`[h,w]` 。`stride`表示步长，`stride>1`表示将卷积得到的结果进行下采样。`pad`表示网络层操作之前对图像数据的上下左右进行补零，`pad=0`表示没有对图像数据进行补零，`pad`也可以是一个向量，格式是`[top bottom left right] `。`dilate`表示扩张率，用于扩张卷积的使用，`dilate=1`时表示为普通卷积，`dilate>1`为扩张卷积。`output channel`表示输出的特征图的个数。
