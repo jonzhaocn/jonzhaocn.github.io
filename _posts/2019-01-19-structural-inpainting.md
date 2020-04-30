@@ -4,12 +4,15 @@ title:  "structural inpainting tensorflow实现"
 date:   2019-01-19 10:43:57 +0800
 categories: [blog]
 tags: [tensorflow, inpainting, deep-learning]
-mathjax: false
+mathjax: true
 ---
 
 ### 1 概述
 
 `structural inpainting`，作者在`context encoder[2]`的基础上进行改进，在网络中加入了`feature reconstruction loss`，`feature reconstruction loss`与`MSE loss`的线性组合构成了`structural loss`，以此来提升修复区域中结构信息的修复效果。
+
+<!--more-->
+
 * 😛😜😝代码托管在[github](https://github.com/jonzhaocn/structural_inpainting)
 
 

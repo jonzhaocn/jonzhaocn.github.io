@@ -15,6 +15,8 @@ mathjax: false
 
 * `keyword`：`matlab`，`GAN`，`Generative Adversarial Nets`， 生成对抗性网络
 
+<!--more-->
+
 #### 1.1 More
 * 😛😜😝代码托管在[github](https://github.com/jonzhaocn/GAN_base_on_matconvnet)
 

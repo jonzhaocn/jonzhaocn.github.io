@@ -11,6 +11,8 @@ mathjax: true
 
 在`globally and locally consisten image completion`中，作者在`context encoder`的基础上进行改进，网络由一个修复网络和两个鉴别网络组成。使用两个鉴别网络来对图像进行分类，判断图像是修复出来的图像，还是`ground truth`。
 
+<!--more-->
+
 * 😛😜😝代码托管在[github](https://github.com/jonzhaocn/globally-and-locally-consistent-image-completion-tensorflow)
 
 

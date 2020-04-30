@@ -11,6 +11,8 @@ mathjax: false
 
 此代码是在`matlab`平台上搭建了一个简单的`toolbox`，用来实现生成对抗性网络（`Generative Adversarial Net`），在代码中加入了卷积、反卷积、扩张卷积等网络层的实现。
 
+<!--more-->
+
 网络层有卷积(`conv2d`)，反卷积(`conv2d transpose`)，扩张卷积(`atrous conv2d`)，下采样(`sub sampling`)，全连接(`fully connect`)和`reshape`，激活函数支持`tanh`、`sigmoid`、`relu`、`leaky_relu`，不过discriminator的最后一层的激活函数仅支持`sigmoid`。
 
 由于我实现反卷积、扩张卷积的操作是通过在输入或卷积核中插入0值实现的，这样是一种低效的实现方式，代码的效率不高，但是可以作为`matlab`搭建神经网络的一些参考。

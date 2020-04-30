@@ -11,6 +11,8 @@ mathjax: true
 
 本代码是对`Region filling and object removal by exemplar-based image inpainting`的`MATLAB`实现，用来对图像进行区域填充、物体移除。
 
+<!--more-->
+
 😛😜😝代码托管在`github`上：[exemplar-based-image-inpainting](https://github.com/jonzhaocn/exemplar-based-image-inpainting)
 ### 2 算法
 如图1所示，为算法伪代码。
@@ -50,9 +52,7 @@ $\bigtriangledown f = [ \begin{matrix} g_x \\ g_y \end{matrix}]=[ \begin{matrix}
 
 注意，在修复过程的迭代中，缺失区域逐渐变小，但是提供像素来源的目标区域固定不变。因为目标区域中，修复出来的像素值可信度比较低，不予以采用。
 ### 3 修复结果
-![原图](/imgs/exemplar-based-image-inpainting/original-image.png)
-![缺失信息](/imgs/exemplar-based-image-inpainting/masked-image.png)
-![修复之后](/imgs/exemplar-based-image-inpainting/inpainted-image.png)
+![修复结果](/imgs/exemplar-based-image-inpainting/example.jpg)
 
 ### 4 参考文献
 1. `Criminisi A, Pérez P, Toyama K. Region filling and object removal by exemplar-based image inpainting[J]. IEEE Transactions on image processing, 2004, 13(9): 1200-1212.`
