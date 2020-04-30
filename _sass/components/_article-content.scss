@@ -57,6 +57,10 @@
   img:not(.emoji) {
     max-width: 100%;
     vertical-align: middle;
+	/*图片居中显示 参考：https://www.smslit.top/2015/10/15/PostImgCenter-Jekyll/ */
+	clear: both; 
+    display: block; 
+    margin:auto; 
   }
   .emoji {
     display: inline-block;
